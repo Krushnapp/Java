@@ -1,0 +1,36 @@
+1)What is the difference between a mutable and immutable object in Java?
+->In Java, a mutable object is an object whose state can be modified after creation, whereas an immutable object is an object whose state cannot be modified after creation. Immutable objects are created using the "final" keyword on their fields and do not have any setter methods.
+
+2)Why is it important to make an object immutable in Java?
+->Immutable objects are thread-safe, they cannot be modified after creation, which means that once created, their state remains consistent throughout the lifetime of the object. This makes them ideal for use in multi-threaded environments where concurrent access to shared objects is a concern.
+
+Can you provide an example of a mutable object in Java?
+An example of a mutable object in Java is the StringBuilder class. The StringBuilder object can be modified after creation by appending, deleting, or replacing characters.
+
+How can you make an object immutable in Java?
+To make an object immutable in Java, you can use the following guidelines:
+
+Use the "final" keyword on the fields of the class
+Do not provide any setter methods
+Make sure that any methods that modify the state of the object return a new instance of the object instead of modifying the existing instance
+Why is it important to make the fields of an immutable object final in Java?
+Making the fields of an immutable object final ensures that their values cannot be changed once they are set during object creation. This helps to ensure that the object remains in a consistent state throughout its lifetime and makes it thread-safe.
+
+Can you provide an example of a class that is immutable in Java?
+An example of an immutable class in Java is the java.lang.String class. Once a String object is created, its value cannot be modified.
+
+What are the benefits of using immutable objects in Java?
+The benefits of using immutable objects in Java are:
+
+Thread-safety: Immutable objects are inherently thread-safe as their state cannot be modified after creation.
+Simplified object lifecycle management: Immutable objects do not require complex object lifecycle management techniques, making them easier to use and maintain.
+Security: Immutable objects are less vulnerable to certain types of security attacks, such as SQL injection attacks, as their state cannot be modified.
+Cacheable: Immutable objects can be easily cached as their state is fixed, making them a good fit for caching scenarios.
+How can you modify a mutable object in a thread-safe manner?
+To modify a mutable object in a thread-safe manner, you can use synchronization mechanisms such as synchronized blocks or methods to ensure that only one thread can modify the object at a time. Another approach is to use thread-safe data structures, such as java.util.concurrent.atomic classes.
+
+Can you explain the concept of defensive copying in Java?
+Defensive copying is a technique used to prevent the modification of objects by creating a copy of the object instead of passing the original object. Defensive copying is important in cases where the original object should not be modified, such as when passing objects between threads or when passing objects to untrusted code.
+
+What is the difference between Collections.unmodifiableList() and making a deep copy of a List in Java?
+Collections.unmodifiableList() returns an unmodifiable view of a given list, which means that the original list cannot be modified through the unmodifiable view. On the other hand, making a deep copy of a list creates a new list with a copy of the elements from the original list. The new list can be modified without affecting the original list. However, making a deep copy of a list can be costly in terms of performance and memory usage, especially for large lists.

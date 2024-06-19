@@ -1,0 +1,7 @@
+1)
+Checked exceptions are checked by the compiler before the program runs, which means the programmer is required to handle them in some way (either by catching them or declaring that they may be thrown). 
+
+Unchecked exceptions, on the other hand, are not checked at compile time and can occur at any point during program execution. The programmer is not required to handle unchecked exceptions, but they may choose to do so if they wish to handle or recover from these exceptions in some way.
+
+
+

@@ -1,0 +1,28 @@
+In Java, access specifiers and access modifiers are terms that are sometimes used interchangeably, but they actually refer to different things.
+
+Access Specifiers:
+Access specifiers determine the visibility and accessibility of a class, method, or variable in the context of the program. There are four access specifiers in Java:
+
+Public: A public class, method, or variable can be accessed from anywhere in the program.
+
+Private: A private class, method, or variable can only be accessed within the same class where it is defined.
+
+Protected: A protected class, method, or variable can be accessed within the same package as well as by its subclasses.
+
+Default or package-private: A class, method, or variable with no access specifier specified can only be accessed within the same package.
+
+Access Modifiers:
+Access modifiers, on the other hand, are a subset of access specifiers that modify the behavior of a class, method, or variable beyond just their visibility. There are five access modifiers in Java:
+
+Public: As an access modifier, public allows unrestricted access to a class, method, or variable.
+
+Private: As an access modifier, private restricts access to a class, method, or variable to only the same class where it is defined.
+
+Protected: As an access modifier, protected allows access to a class, method, or variable within the same package as well as by its subclasses.
+
+Default or package-private: As an access modifier, default or package-private restricts access to a class, method, or variable to only the same package.
+
+Static: As an access modifier, static is used to create class-level variables and methods that can be accessed without creating an instance of the class.
+
+
+

@@ -1,0 +1,37 @@
+Memory allocation in Java is the process of reserving memory space for objects and variables to be used during program execution. Java uses a heap and a stack to allocate memory.
+
+
+Object: An object is an instance of a class, encapsulating data (properties) and behavior (methods). Objects reside in the heap memory, which is a managed memory area in the JVM. When you create an object, memory is allocated in the heap to store its state.
+
+Reference: A reference is a variable that holds the memory address (location) of an object. References themselves are stored on the stack, which is a smaller, faster memory area used for local variables, method calls, and function call parameters.
+
+Java automatically handles memory allocation and deallocation for objects created with the new keyword. When an object is no longer being referenced by any part of the program, the garbage collector automatically frees up the memory it was occupying.
+
+Here's an example code that demonstrates memory allocation in Java:
+
+arduino
+Copy code
+public class MemoryAllocationExample {
+    public static void main(String[] args) {
+        int num1 = 10; // primitive type allocated on the stack
+        String name = "John"; // object reference allocated on the stack, object allocated on the heap
+        
+        int[] numbers = {1, 2, 3, 4, 5}; // array object reference allocated on the stack, array object allocated on the heap
+        
+        Person person = new Person("Jane", 25); // object reference allocated on the stack, object allocated on the heap
+        
+        // program logic that uses the above variables and objects
+        
+    }
+}
+
+class Person {
+    String name;
+    int age;
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+In this code, num1 is a primitive type and is allocated on the stack. name, numbers, and person are object references that are allocated on the stack, while the objects they reference are allocated on the heap. The Person class is an example of a custom object that is defined by the programmer and is allocated on the heap when an instance of it is created using the new keyword.

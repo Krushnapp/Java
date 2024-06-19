@@ -1,0 +1,191 @@
+links-> http://www.instanceofjava.com/p/interview-questions.html
+https://www.javaiq.net/interview/notes/java-interview-revision-notes.htm
+
+https://www.w3schools.com/java/java_iterator.asp
+
+https://325b057e.isolation.zscaler.com/profile/1233fc6e-6618-4022-a03b-96afce7da312/zia-session/?controls_id=4d2db41b-3e17-425e-a782-6968decbf932&region=bom&tenant=462f064b6b51&user=4b0b29c64d6cf67fe87f89fe&original_url=https%3A%2F%2Fgithub.com%2Flearning-zone%2Fjava-basics%2Fblob%2Fmaster%2Fjava-multiple-choice-questions-answers.md&key=sh-1&hmac=49e7177c5e25f8c3aa4970cadc574aecacc8805f070d13248b5793d6cfd4eddd
+
+
+1. Java Basics:
+- What is Java?
+- How does a program run in Java?
+- JRE, JVM, and JDK
+- Memory management in Java
+
+2. Object-Oriented Programming:
+- Java API (Application Programming Interface)
+- Object
+- Variables: instance vs local variables
+- Classes and their scope
+- Methods
+- Constructors and constructor chaining
+- Copy constructor
+- Private constructor
+- "this" keyword
+- Modifiers: private, public, default, and protected
+- No access modifier
+
+3. Inheritance and Polymorphism:
+- Inheritance in Java
+- How is inheritance achieved in Java?
+- Interface vs Abstract class
+- Abstract class
+- Polymorphism: static/compile-time and run/dynamic
+- Static binding in Java
+- Dynamic binding in Java
+- Method Overloading
+- Method Overriding
+- Class casting
+- Method hiding
+
+4. Exception Handling:
+- Exception handling in Java
+- Predefined exceptions
+- Custom exceptions
+- try-catch block
+- finally block
+- throw keyword
+- throws keyword
+
+5. Multithreading:
+- Thread and Multithreading
+- Thread class in Java
+- Creating threads in Java: Extending Thread class and implementing Runnable interface
+- Synchronization
+- Deadlock
+- Synchronized block
+- Daemon Thread
+- volatile keyword
+- Thread pool
+- Thread exceptions
+
+6. Java Collections and Generics:
+- Garbage collection in Java
+- Collections API
+- Functional interfaces
+- Lambda expressions
+- Generics
+
+7. File Handling and I/O Operations:
+- File handling in Java
+- Input/Output operations
+
+8. Additional Concepts:
+- Inner and nested classes
+- Encapsulation in Java
+- Reflection in Java
+- Serialization and Deserialization
+- Networking and socket programming
+- Java Database Connectivity (JDBC)
+- Java frameworks and libraries
+- Unit testing frameworks (e.g., JUnit)
+- Design patterns
+- Performance optimization techniques
+- Security considerations
+- Java modules
+- Java memory model and thread synchronization
+- JVM tuning and performance monitoring
+
+9. Java 8 Features:
+- Marker interfaces (e.g., Serializable, Cloneable)
+- Lambda expressions
+- Streams and functional programming
+- Default methods in interfaces
+- Optional class
+- Date and Time API (java.time package)
+- Method references
+- Functional interfaces (e.g., Predicate, Consumer, Supplier)
+- Stream API and Stream operations
+- CompletableFuture class for asynchronous programming
+https://leetcode.com/discuss/interview-question/3887612/50%2B-Java-Interview-Questions-for-Programmers-with-2-to-3-Years-Experience
+2)Annotation->Transactionla,vale,
+1)sort using comparator any class
+2)serilazation/transiant  ( protected/default/static/transient/volatile etc)
+3)serialversion UID
+4)Volatile(Thread)
+5)consumer interface
+6)Varible argumrnt
+7)flatmap,multipart
+8)Jmeter
+9)Inheretance vs compostion
+10)Exchanger class(thread)
+11)java memory model (thread)
+12)Design pattern (Singlton pattern),saga pattern
+13)Secure springboot app
+14)How springboot easy dependcy code
+15)classpath
+16)Actuator end point
+17)generics in java
+18)Type safety
+18)String related concepts( string pool, immutability, advantages/disadvantages)
+19)Why exceptions are important and how to deal with them.
+20)Inner workings of ( ArrayList, LinkedList, HashSet, TreeSet ,hashmap,concurrenthashmap etc)
+21)Map implementations( HashMap, TreeMap) and differences among them.
+22)Comparable and Comparator( very important)  
+23)Volatile( very important; visibility/happens-before guarantee)
+24)Runnable/Callable/Executor framework( including Future)
+25)JDBC basics
+26)Multithreading concepts( synchronized, object/class level locking, wait(), notify()
+27)Concurrent API( ConcurrentHashMap, BlockingQueue, CyclicBarrier, CountDownLatch, Semaphore)
+28)ReentrantLock, ReadWriteLock
+29)Scope in springboot
+
+## 50 Advanced Java Topics Questions:
+
+1. Explain the Java Memory Model (JMM) and its impact on thread visibility and ordering.
+2. Discuss different garbage collection algorithms (e.g., Mark-Sweep-Compact) and their trade-offs.
+3. Describe the concept of concurrency and its challenges (e.g., race conditions, deadlocks).
+4. Explain different concurrency mechanisms in Java (e.g., synchronized keyword, ReentrantReadWriteLocks, ConcurrentHashMap).
+5. Discuss the benefits and limitations of using synchronized blocks for thread safety.
+6. Describe the concept of deadlock in multithreading and strategies for preventing it.
+7. Explain the difference between checked and unchecked exceptions in Java.
+8. Discuss the design and implementation of custom exception hierarchies for specific error handling.
+9. Differentiate between shallow and deep copy of objects in Java and how to achieve each.
+10. Describe the concept of immutability and its benefits for thread safety and data consistency.
+
+11. Explain the purpose and use cases of Java reflection for accessing class information at runtime.
+12. Discuss different strategies for implementing serialization and deserialization of objects in Java.
+13. Describe the working principle of the synchronized keyword and its different variations (e.g., synchronized method, synchronized block).
+14. Explain the difference between HashMap and ConcurrentHashMap, and their suitability for different scenarios.
+15. Discuss the internal workings of a HashMap, including hash functions and collision handling.
+16. Describe the benefits and drawbacks of using static methods and variables excessively.
+17. Explain the concept of generics in Java and how they enhance type safety and code reusability.
+18. Discuss the limitations of generics and potential workarounds, such as type erasure.
+19. Describe different design patterns commonly used in Java development (e.g., Singleton, Factory, Observer).
+20. Explain the use of annotations in Java and how they can be leveraged for various purposes (e.g., @Override, @Deprecated).
+
+21. Discuss the concept of functional programming and how it can be implemented using Java features (e.g., lambdas, streams).
+22. Explain the benefits and challenges of adopting a functional programming style in Java applications.
+23. Describe different approaches for handling I/O operations in Java (e.g., traditional blocking I/O, NIO, asynchronous I/O).
+24. Discuss the advantages and disadvantages of using NIO (Non-Blocking I/O) for efficient asynchronous operations.
+25. Explain the concept of lazy initialization and its use cases for optimizing performance and memory usage.
+
+26. Describe different strategies for implementing thread pools in Java to manage concurrent tasks efficiently.
+27. Explain the concept of fairness in scheduling and its importance for thread pools.
+28. Discuss strategies for optimizing performance in Java applications, including memory management, efficient data structures, and code optimization techniques.
+29. Explain the concept of unit testing and how it helps ensure code quality and maintainability.
+30. Describe different frameworks and tools commonly used for unit testing in Java (e.g., JUnit, Mockito).
+
+31. Discuss the principles of design for testability and how to write code that is easily testable.
+32. Explain the concept of dependency injection and its benefits for loose coupling and improved testability.
+33. Describe different techniques for implementing dependency injection in Java (e.g., constructor injection, setter injection).
+34. Discuss the benefits and challenges of using external libraries and frameworks in Java development.
+35. Explain the concept of logging and its importance for debugging and monitoring applications.
+
+36. Describe different logging libraries and frameworks available in Java (e.g., Log4j, SLF4J).
+37. Discuss best practices for writing effective and informative log messages.
+38. Explain the concept of security in Java applications and common security threats (e.g., SQL injection, cross-site scripting).
+39. Describe different techniques for securing Java applications (e.g., input validation, authorization, encryption).
+40. Discuss best practices for writing secure code and performing security audits.
+
+41. Explain the concept of unit testing coverage and how to measure it effectively.
+42. Describe different types of unit tests (e.g., positive, negative, edge case).
+43. Discuss the benefits and limitations of using mock objects for unit testing.
+44. Explain the concept of code coverage and different tools for measuring it.
+45. Describe the importance of continuous integration and continuous delivery
+
+
+
+best
+
+
