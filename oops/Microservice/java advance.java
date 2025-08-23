@@ -72,3 +72,287 @@ Field Injection - Dependencies injected directly into fields via @Autowired (not
 Prototype in Singleton Problem - Singleton bean always gets same prototype instance
 Request Context Holder - Spring utility to access current HTTP request
 Bean Validation - Automatic validation using @Valid annotations
+
+        # Extended Spring Container & Bean - Revision Keywords & Definitions
+
+## **Container Initialization & Startup**
+
+        **SpringApplication.run()** - Entry point that bootstraps Spring container
+
+**AnnotationConfigApplicationContext** - Container implementation for annotation-based configuration
+
+**ClassPathXmlApplicationContext** - Container implementation for XML-based configuration
+
+**Environment** - Abstraction for property sources and profiles
+
+**PropertyResolver** - Interface for resolving properties from various sources
+
+**ConversionService** - Service for type conversion during property binding
+
+**BeanDefinitionReader** - Component that reads and registers bean definitions
+
+**AnnotationBeanDefinitionReader** - Reads bean definitions from annotated classes
+
+**ClassPathBeanDefinitionScanner** - Scans classpath for stereotype annotations
+
+**ComponentScanBeanDefinitionParser** - Parses @ComponentScan annotations
+
+## **Advanced Bean Creation**
+
+        **InstantiationStrategy** - Strategy for creating bean instances (reflection vs CGLIB)
+
+**ObjectFactory** - Functional interface for lazy bean creation
+
+**FactoryBean** - Interface for custom bean creation logic
+
+**SmartFactoryBean** - Extended FactoryBean with additional lifecycle callbacks
+
+**BeanWrapper** - Wrapper providing property access and type conversion
+
+**PropertyAccessor** - Interface for accessing object properties
+
+**BeanInstantiationException** - Exception during bean instantiation
+
+**BeanDefinitionValidationException** - Invalid bean definition error
+
+## **Dependency Resolution**
+
+        **DependencyDescriptor** - Describes a dependency injection point
+
+**AutowireCandidateResolver** - Determines which beans are candidates for autowiring
+
+**QualifierAnnotationAutowireCandidateResolver** - Handles @Qualifier annotations
+
+**InjectionPoint** - Represents where dependency injection occurs
+
+**@Autowired** - Annotation for automatic dependency injection
+
+**@Qualifier** - Annotation to specify which bean to inject when multiple candidates exist
+
+**@Primary** - Marks bean as primary choice when multiple candidates exist
+
+**@Value** - Injects property values from environment
+
+**SpEL (Spring Expression Language)** - Expression language for runtime value evaluation
+
+## **Bean Lifecycle Hooks**
+
+        **BeanNameAware** - Interface to get bean's name in container
+
+        **BeanFactoryAware** - Interface to get reference to BeanFactory
+
+**ApplicationContextAware** - Interface to get reference to ApplicationContext
+
+**EnvironmentAware** - Interface to get reference to Environment
+
+**InitializingBean.afterPropertiesSet()** - Callback after property setting
+
+**DisposableBean.destroy()** - Callback before bean destruction
+
+**@EventListener** - Method-level annotation for handling application events
+
+**SmartInitializingSingleton** - Callback after all singletons are instantiated
+
+## **Event System**
+
+        **ApplicationEvent** - Base class for application events
+
+**ApplicationListener** - Interface for listening to application events
+
+**ApplicationEventPublisher** - Interface for publishing events
+
+**ContextRefreshedEvent** - Event fired when ApplicationContext is refreshed
+
+**ContextClosedEvent** - Event fired when ApplicationContext is closed
+
+**@EventListener** - Annotation-based event handling
+
+**@Async** - Asynchronous event processing
+
+**ApplicationEventMulticaster** - Multicasts events to registered listeners
+
+## **Advanced Scoping**
+
+        **ScopeMetadata** - Metadata about bean scope
+
+**ScopeMetadataResolver** - Resolves scope metadata from bean definition
+
+**Scope** - Interface for custom scope implementations
+
+**RequestScope** - Implementation of request scope
+
+**SessionScope** - Implementation of session scope
+
+**SimpleThreadScope** - Thread-scoped beans implementation
+
+**CustomScopeConfigurer** - Configures custom scopes
+
+**ScopedProxyFactoryBean** - Creates scoped proxies
+
+## **Proxy & AOP Integration**
+
+        **ProxyFactory** - Factory for creating AOP proxies
+
+**ProxyFactoryBean** - FactoryBean for creating proxies
+
+**AopProxy** - Interface for AOP proxy implementations
+
+**JdkDynamicAopProxy** - JDK-based proxy implementation
+
+**CglibAopProxy** - CGLIB-based proxy implementation
+
+**ProxyTargetClass** - Force CGLIB proxying
+
+**ExposeProxy** - Make current proxy available via AopContext
+
+**AopContext** - ThreadLocal access to current proxy
+
+## **Transaction Management**
+
+        **@Transactional** - Declarative transaction management
+
+**PlatformTransactionManager** - Core interface for transaction management
+
+**TransactionStatus** - Information about transaction status
+
+**TransactionDefinition** - Transaction properties (isolation, propagation)
+
+**TransactionInterceptor** - AOP interceptor for transaction management
+
+**TransactionProxyFactoryBean** - Creates transactional proxies
+
+**@EnableTransactionManagement** - Enables annotation-driven transactions
+
+**TransactionSynchronization** - Callbacks for transaction events
+
+## **Validation & Conversion**
+
+        **Validator** - Interface for bean validation
+
+**LocalValidatorFactoryBean** - JSR-303 validator integration
+
+**@Valid** - Triggers validation
+
+**BindingResult** - Holds validation results
+
+**ConversionService** - Type conversion service
+
+**Converter** - Interface for type conversion
+
+**Formatter** - Interface for string formatting/parsing
+
+**PropertyEditor** - Legacy property conversion interface
+
+## **Conditional Bean Creation**
+
+        **@Conditional** - Create beans based on conditions
+
+**Condition** - Interface for conditional logic
+
+**@ConditionalOnClass** - Create bean if class is present
+
+**@ConditionalOnMissingBean** - Create bean if no other bean exists
+
+**@ConditionalOnProperty** - Create bean based on property value
+
+**@ConditionalOnWebApplication** - Create bean only in web environment
+
+**@Profile** - Create beans for specific profiles
+
+**ProfileCondition** - Condition based on active profiles
+
+## **Resource Management**
+
+        **Resource** - Abstraction for external resources
+
+**ResourceLoader** - Interface for loading resources
+
+**ResourcePatternResolver** - Extended resource loading with pattern matching
+
+**PathMatchingResourcePatternResolver** - Ant-style pattern matching
+
+**ClassPathResource** - Classpath-based resource
+
+**FileSystemResource** - File system-based resource
+
+**UrlResource** - URL-based resource
+
+**@PropertySource** - Load properties from resources
+
+## **Internationalization**
+
+        **MessageSource** - Interface for message resolution
+
+**ResourceBundleMessageSource** - Properties file-based messages
+
+**ReloadableResourceBundleMessageSource** - Reloadable message source
+
+**MessageSourceAccessor** - Convenient access to MessageSource
+
+**LocaleResolver** - Determines current locale
+
+**@EnableWebMvc** - Enables internationalization support
+
+## **Caching**
+
+        **@Cacheable** - Cache method return values
+
+**@CacheEvict** - Remove values from cache
+
+**@CachePut** - Update cache with method result
+
+**CacheManager** - Manages cache instances
+
+**Cache** - Single cache instance
+
+**@EnableCaching** - Enables annotation-driven caching
+
+**CacheResolver** - Resolves caches for operations
+
+## **Testing Support**
+
+        **@SpringBootTest** - Integration testing annotation
+
+**@TestConfiguration** - Test-specific configuration
+
+**@MockBean** - Mock beans in tests
+
+**@SpyBean** - Spy on existing beans
+
+**TestContext** - Testing context management
+
+**@DirtiesContext** - Mark context as dirty for cleanup
+
+**@Rollback** - Roll back transactions in tests
+
+**@TestPropertySource** - Test-specific properties
+
+## **Metrics & Monitoring**
+
+        **MeterRegistry** - Micrometer metrics registry
+
+**@Timed** - Method execution timing metrics
+
+**@Counted** - Method invocation counting
+
+**ApplicationStartup** - Startup process monitoring
+
+**StartupStep** - Individual startup step measurement
+
+**BeanCreationProfiler** - Profile bean creation performance
+
+## **Security Integration**
+
+        **@PreAuthorize** - Method-level security
+
+**@PostAuthorize** - Post-execution security checks
+
+**@Secured** - Role-based method security
+
+**SecurityContext** - Current security context
+
+**Authentication** - Current user authentication
+
+**@EnableGlobalMethodSecurity** - Enable method-level security
+
+This comprehensive list covers advanced Spring concepts essential for senior-level interviews and complex application development!
