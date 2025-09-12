@@ -44,14 +44,14 @@ In Java, there are two main ways to create threads:
 
 1. Extending the `Thread` class: You create a subclass of `Thread` and override its `run()` method. This method defines the code that the thread will execute.
 
-2. Implementing the `Runnable` interface: You create a class that implements the `Runnable` interface. This interface defines a single method, `run()`, which contains the thread's code. Then, you create an instance of this class and pass it to a `Thread` object's constructor.
+2. Implementing the `Runnable` interface: You create a class that implements the `Runnable` interface. This interface defines a single method, `run()`, which contains the threads code. Then, you create an instance of this class and pass it to a `Thread` objects constructor.
 
-Here's a breakdown of which approach is generally preferred and why:
+Heres a breakdown of which approach is generally preferred and why:
 
 Benefits of `Runnable`:
 
 - Flexibility: You can implement `Runnable` in any class, even if it already extends another class. This allows for greater code reuse and design flexibility.
-- Decoupling: By separating the thread's behavior from the class itself, `Runnable` promotes better object-oriented design principles.
+- Decoupling: By separating the threads behavior from the class itself, `Runnable` promotes better object-oriented design principles.
 - Inheritance Encapsulation: `Thread` already provides functionalities like thread scheduling and lifecycle management. Implementing `Runnable` allows you to focus on the specific task the thread needs to perform.
 
 Drawbacks of `Extending Thread`:
@@ -65,7 +65,7 @@ In most cases, implementing the `Runnable` interface is the preferred approach f
 
 Additional Considerations:
 
-- If your thread class doesn't need any additional methods beyond `run()`, it might be a good candidate for an anonymous inner class implementing `Runnable`.
-- For simple use cases where inheritance isn't an issue and you don't need separate lifecycle management, extending `Thread` can be acceptable. However, be aware of the potential drawbacks and consider if `Runnable` would provide a more flexible and maintainable design.
+- If your thread class doesnt need any additional methods beyond `run()`, it might be a good candidate for an anonymous inner class implementing `Runnable`.
+- For simple use cases where inheritance isnt an issue and you dont need separate lifecycle management, extending `Thread` can be acceptable. However, be aware of the potential drawbacks and consider if `Runnable` would provide a more flexible and maintainable design.
 
 Remember, the best approach depends on your specific needs and the design of your application. Choose the method that promotes code clarity, maintainability, and flexibility.

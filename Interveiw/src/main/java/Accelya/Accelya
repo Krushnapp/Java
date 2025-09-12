@@ -1,0 +1,71 @@
+Contributed to migration of airline cargo microservices from RabbitMQ to AWS MSK (Kafka), integrating
+Keycloak OAuth2.0 and TLS for secure, scalable communication with springboot
+
+## **1. RabbitMQ vs Kafka (Migration Justification)**
+
+1. What are the key differences between RabbitMQ and Kafka?
+2. Why would you migrate from RabbitMQ to Kafka?
+3. How do Kafka and RabbitMQ handle message ordering?
+4. How do RabbitMQ acknowledgements differ from Kafka consumer offsets?
+5. What challenges did you face while migrating from RabbitMQ to Kafka?
+
+---
+
+## **2. Kafka Fundamentals**
+
+6. What are Kafka topics and partitions?
+7. How does Kafka ensure fault tolerance?
+8. What is the difference between replication factor and partition count?
+9. Explain producer acks (`acks=0,1,all`) in Kafka.
+10. What is a Kafka consumer group, and how does it help with scalability?
+
+---
+
+## **3. AWS MSK (Managed Kafka)**
+
+11. What is AWS MSK, and how is it different from self-hosted Kafka?
+12. How do you secure MSK with IAM and TLS?
+13. How do you monitor Kafka performance in AWS?
+14. What are common scaling strategies in MSK?
+15. What is the role of Zookeeper (or KRaft) in Kafka/MSK?
+
+---
+
+## **4. Spring Boot + Kafka**
+
+16. How do you send messages from Spring Boot to Kafka?
+17. How do you consume Kafka messages in Spring Boot?
+18. How do you handle retries and dead-letter topics in Spring Kafka?
+19. How do you configure Kafka security (SSL/OAuth) in Spring Boot?
+20. What happens if a Kafka consumer crashes before committing offsets?
+
+---
+
+## **5. Security – Keycloak OAuth2.0 + TLS**
+
+21. What is OAuth2.0, and how does Keycloak implement it?
+22. What’s the difference between OAuth2.0 and OpenID Connect?
+23. How does Spring Boot validate JWT tokens from Keycloak?
+24. What is the difference between one-way TLS and mutual TLS?
+25. How did you configure TLS for Kafka clients in Spring Boot?
+
+---
+
+## **6. Real-World Scenarios**
+
+26. How did you ensure zero downtime during migration from RabbitMQ to Kafka?
+27. How did you migrate historical data from RabbitMQ to Kafka?
+28. How did you handle message format compatibility (Avro/JSON/Protobuf)?
+29. What monitoring tools did you use for Kafka consumers and producers?
+30. What best practices did you follow to ensure secure inter-service communication?
+
+---
+
+⚡ Tip: You don’t need to **master everything**, but for each question:
+
+* Have a **2–3 line confident answer** (with a keyword like partition, offset, JWT, TLS handshake).
+* Be ready with **1–2 real examples** (like “In our migration, we faced offset mismatch issue and solved it by resetting offsets via Kafka CLI”).
+
+---
+
+👉 Do you want me to now **prepare the short model answers** (2–3 lines each) for these 30 questions so you can memorize and practice?

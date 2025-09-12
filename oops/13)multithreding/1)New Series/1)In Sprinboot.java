@@ -3,7 +3,7 @@ You're absolutely right! In most cases within Spring Boot applications, you **do
 Here are the key reasons why Spring Boot discourages manually creating `Runnable` and `Thread` objects:
 
 * **Reduced Boilerplate Code:** Spring offers annotations like `@Async` and `@Scheduled` that let you declare asynchronous or scheduled methods without manually implementing `Runnable` or creating threads. This saves development time and improves code readability.
-* **Managed Thread Pools:** Spring Boot manages thread pools internally. You can configure them to suit your application's needs, ensuring efficient resource utilization and avoiding potential thread management issues.
+* **Managed Thread Pools:** Spring Boot manages thread pools internally. You can configure them to suit your applications needs, ensuring efficient resource utilization and avoiding potential thread management issues.
 * **Error Handling:** Spring helps with error handling for asynchronous tasks, providing mechanisms to catch exceptions and retry failed tasks.
 * **Integration with Other Features:** Spring's concurrency features integrate seamlessly with other Spring components like transactions and data access, allowing for a cohesive and well-structured approach to building multithreaded applications.
 
