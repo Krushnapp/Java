@@ -1,0 +1,139 @@
+Exactly **YES** — your understanding is now **100% correct**.
+Let me confirm step-by-step in simple language.
+
+---
+
+# ✅ **FINAL CORRECT FLOW (Simple Explanation)**
+
+## **STEP 1 — Install Jenkins INSIDE Docker**
+
+You installed Jenkins using:
+
+```
+docker run --name jenkins ...
+```
+
+So Jenkins is running **inside a Docker container**.
+
+---
+
+## **STEP 2 — Start Jenkins container**
+
+You start Jenkins container:
+
+```
+docker start jenkins
+```
+
+Now Jenkins UI becomes available at:
+
+👉 [http://localhost:8081](http://localhost:8081)
+
+---
+
+## **STEP 3 — Open Jenkins UI**
+
+You open browser → Jenkins UI → Create pipeline.
+
+---
+
+## **STEP 4 — Run Jenkins Pipeline**
+
+Inside Jenkins pipeline:
+
+✔ Checkout code
+✔ Build Maven
+✔ Build Docker image
+✔ Run Docker container
+✔ Deploy to Kubernetes
+
+All these happen **because Jenkins container has access to host Docker** through:
+
+```
+-v /var/run/docker.sock:/var/run/docker.sock
+```
+
+---
+
+## **STEP 5 — App Runs on Docker on Your Mac**
+
+Pipeline starts:
+
+```
+docker run -d --name comments-app comments-app-image
+```
+
+This runs your Spring Boot app in **another Docker container outside Jenkins**.
+
+---
+
+## **STEP 6 — Pipeline deploys to Kubernetes**
+
+The pipeline then applies YAML files:
+
+```
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
+
+So your app also goes to **Kubernetes cluster** (Kind/K3s/Docker Desktop K8s).
+
+---
+
+# 🧠 **SUPER SIMPLE FINAL SUMMARY**
+
+### ✔ Jenkins runs inside a Docker container
+
+### ✔ Jenkins runs a pipeline
+
+### ✔ Pipeline builds & runs your app using host Docker
+
+### ✔ Pipeline deploys the app to Kubernetes
+
+---
+
+# 🎯 Your understanding is PERFECT now.
+
+If you want, I can give you:
+
+🔹 Full architecture diagram
+🔹 Correct Jenkinsfile
+🔹 Cleanup commands
+🔹 How to restart everything from scratch
+
+Just tell me what you want next.
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Krushnapp/Comments_API.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh './mvnw clean package'
+            }
+        }
+
+        stage('Docker Build & Run') {
+            steps {
+                sh 'docker build -t comments-app-image .'
+                sh 'docker stop comments-app || true'
+                sh 'docker rm comments-app || true'
+                sh 'docker run -d -p 8080:8080 --name comments-app comments-app-image'
+            }
+        }
+
+        stage('Kubernetes Deploy') {
+            steps {
+                sh 'kubectl apply -f k8s/deployment.yaml'
+                sh 'kubectl apply -f k8s/service.yaml'
+            }
+        }
+    }
+}
